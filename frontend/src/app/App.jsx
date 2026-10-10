@@ -8,13 +8,13 @@ import { SocketIOProvider } from "y-socket.io"
 function App() {
 
   const editorRef = useRef(null)
-  const [ username, setUsername ] = useState(() => {
+  const [username, setUsername] = useState(() => {
     return new URLSearchParams(window.location.search).get("username") || ""
   })
-  const [ users, setUsers ] = useState([])
+  const [users, setUsers] = useState([])
 
   const ydoc = useMemo(() => new Y.Doc(), [])
-  const yText = useMemo(() => ydoc.getText("monaco"), [ ydoc ])
+  const yText = useMemo(() => ydoc.getText("monaco"), [ydoc])
 
 
   const handleMount = (editor) => {
@@ -23,7 +23,7 @@ function App() {
     new MonacoBinding(
       yText,
       editorRef.current.getModel(),
-      new Set([ editorRef.current ]),
+      new Set([editorRef.current]),
     )
   }
 
