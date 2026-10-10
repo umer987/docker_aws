@@ -60,10 +60,7 @@ function App() {
       function handleBeforeUnload() {
         provider.awareness.setLocalStateField("user", null)
       }
-
       window.addEventListener("beforeunload", handleBeforeUnload)
-
-
       return () => {
         provider.disconnect()
         window.removeEventListener("beforeunload", handleBeforeUnload)
