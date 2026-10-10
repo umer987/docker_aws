@@ -106,7 +106,6 @@ function App() {
             </li>
           ))}
         </ul>
-
       </aside>
       <section
         className="w-3/4 bg-neutral-800 rounded-lg overflow-hidden">
