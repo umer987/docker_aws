@@ -52,7 +52,6 @@ function App() {
       const states = Array.from(provider.awareness.getStates().values())
       console.log(states)
       setUsers(states.filter(state => state.user && state.user.username).map(state => state.user))
-
       provider.awareness.on("change", () => {
         const states = Array.from(provider.awareness.getStates().values())
         setUsers(states.filter(state => state.user && state.user.username).map(state => state.user))
