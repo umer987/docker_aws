@@ -48,10 +48,7 @@ function App() {
       const provider = new SocketIOProvider("/", "monaco", ydoc, {
         autoConnect: true,
       })
-
       provider.awareness.setLocalStateField("user", { username })
-
-
       const states = Array.from(provider.awareness.getStates().values())
 
       console.log(states)
